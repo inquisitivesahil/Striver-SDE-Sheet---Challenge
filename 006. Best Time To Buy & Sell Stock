@@ -1,0 +1,13 @@
+#include <bits/stdc++.h> 
+int maximumProfit(vector<int> &prices){
+
+    int minimumPrice = INT_MAX;
+    int maximumProfit = 0;
+
+    for(int price : prices){
+        minimumPrice = min(minimumPrice, price);
+        maximumProfit = max(maximumProfit, price - minimumPrice);
+    }
+
+    return maximumProfit;
+}
